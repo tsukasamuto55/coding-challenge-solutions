@@ -11,7 +11,7 @@ var insertionSortList = function (head) {
     for (let i = 1; i < head.length; i++) {
         let currentVal = head[i]
         for (let j = i - 1; j >= 0 && head[j] > currentVal; j--) {
-            j = i + 1
+            head[j] = currentVal + 1
             console.log(currentVal, head[j])
         }
         console.log(head)
