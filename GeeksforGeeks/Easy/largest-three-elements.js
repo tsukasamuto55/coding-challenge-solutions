@@ -6,13 +6,13 @@
 function find3Largest(arr) {
     // First, sort the array in descending order
     arr.sort((a, b) => b - a);
-
     // Initialize variables to track the three largest unique elements
     let largest = -Infinity, secondLargest = -Infinity, thirdLargest = -Infinity;
 
     for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i], largest)
+        console.log('arr[i]: ', arr[i], ' ', 'largest: ', largest)
         // Update the largest, second largest, and third largest values accordingly
+        // Largest value should be updated once
         if (arr[i] > largest) {
             thirdLargest = secondLargest;
             secondLargest = largest;
@@ -30,4 +30,4 @@ function find3Largest(arr) {
     console.log("Three largest elements are: " + largest + ", " + secondLargest + ", " + thirdLargest);
 }
 
-console.log(find3Largest([11, 99, 2, 4, 3, 99, 465]))
+console.log(find3Largest([10, 11, 99, 2, 4, 3, 99, 1002]))
