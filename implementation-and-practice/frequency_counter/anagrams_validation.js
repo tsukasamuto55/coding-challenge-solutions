@@ -25,7 +25,6 @@ function isValid(str1, str2) {
 
     for (let char of str1) lookup[char] ? lookup[char] += 1 : lookup[char] = 1;
     for (let char of str2) {
-
         if (!lookup[char]) return false;
         else lookup[char] -= 1;
     }
