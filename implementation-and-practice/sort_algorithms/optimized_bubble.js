@@ -1,19 +1,18 @@
 // Optimized BubbleSort with noSwaps
-function bubbleSort(arr){
-  var noSwaps;
-  for(var i = arr.length; i > 0; i--){
-    noSwaps = true;
-    for(var j = 0; j < i - 1; j++){
-      if(arr[j] > arr[j+1]){
-        var temp = arr[j];
-        arr[j] = arr[j+1];
-        arr[j+1] = temp;
-        noSwaps = false;         
+function bubbleSort(arr) {
+  for (var i = arr.length; i > 0; i--) {
+    let noSwaps = true;
+    for (var j = 0; j < i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+        noSwaps = false;
+        console.log(arr)
       }
     }
-    if(noSwaps) break;
+    if (noSwaps) break;
   }
   return arr;
 }
 
-bubbleSort([8,1,2,3,4,5,6,7]);
+const result = bubbleSort([4, 2, 7, 10, 22, 3, 9, 1]);
+console.log(result)
